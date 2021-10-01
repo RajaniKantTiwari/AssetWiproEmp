@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.wipro.model.Employee" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10dp"
+    android:padding="@dimen/padding_10dp"
+    app:cardCornerRadius="@dimen/card_radius_5dp"
+    app:cardElevation="@dimen/card_elevation_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10dp">
+        <TextView
+            style="@style/TextAppearance"
+            android:text="@{model.userId}"/>
+        <TextView
+            style="@style/TextAppearance"
+            android:text="@{model.jobTitleName}"/>
+        <TextView
+            style="@style/TextAppearance"
+            android:text="@{model.preferredFullName}"/>
+
+        <TextView
+            style="@style/TextAppearance"
+            android:text="@{model.phoneNumber}"/>
+        <TextView
+            style="@style/TextAppearance"
+            android:text="@{model.emailAddress}"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>
